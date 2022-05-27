@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title%}Oceny ucznia{% endblock %}
+
+{%block content %}
+
+    {% if uczen %}
+        <h3>Oceny ucznia</h3>
+        <h5>{{uczen.imie}} {{uczen.nazwisko}} - {{uczen.klasa.nazwa_klasy}}</h5>
+
+        {% if oceny %}
+            
+        <table>
+            <thead>
+                <th>Przedmiot</th>
+                <th>Ocena</th>        
+            </thead>
+        {% for o in oceny %}
+            <tr>
+                <td>
+                    {{o.przedmiot}}
+                </td>
+                <td>
+                    {{o.ocena}}
+                </td>
+            </tr>
+        {% endfor %}
+
+        </table>
+        {% endif %}
+        
+        <!-- <p>Uczniowie:</p>
+        <ol>
+        {% for kl in uczniowie %}
+            <li><a href="/oceny/{{kl.id}}/">{{kl.nazwisko}} {{kl.imie}}</a></li>
+        {% endfor %}
+        </ol>  -->
+    {% else %}
+        <p>Brak uczniów w wybranej klasie w bazie danych</p>
+    {% endif %}
+
+
+{% endblock %}

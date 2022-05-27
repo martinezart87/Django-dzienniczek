@@ -37,6 +37,8 @@ router.register(r'ocena', views.OcenaViewSet)
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('uczniowie/<int:klasa_id>/', views.uczniowie, name='uczen'),
+    path('oceny/<int:uczen_id>/', views.oceny, name='oceny'),
     path('admin/', admin.site.urls),
     path('api/',include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))

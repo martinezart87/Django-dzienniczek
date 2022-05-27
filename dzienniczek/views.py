@@ -38,4 +38,15 @@ class OcenaViewSet(viewsets.ModelViewSet):
 def index(request):
     # return HttpResponse("To są wszystkie pytania")
     klasy=Klasa.objects.all()[:5]
-    return render(request,'index.html',{'klasy':klasy})
+    return render(request,'klasy.html',{'klasy':klasy})
+
+def uczniowie(request, klasa_id):
+    # kl = get_object_or_404(Uczen, klasa_id=klasa_id)
+    kl = Uczen.objects.filter(klasa_id=klasa_id)
+    klasa = Klasa.objects.filter(pk=klasa_id)
+    return render(request, 'uczniowie.html',{'uczniowie': kl, 'klasa': klasa})
+
+def oceny(request, uczen_id):
+    uczen = get_object_or_404(Uczen, pk=uczen_id)
+    oceny = Ocena.objects.filter(uczen_id=uczen_id).select_related('przedmiot')
+    return render(request, 'oceny.html',{'uczen': uczen, 'oceny': oceny})

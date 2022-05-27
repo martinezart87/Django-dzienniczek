@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title%}Uczniowie{% endblock %}
+
+{%block content %}
+
+    {% if uczniowie %}
+        <h3>Klasa</h3>
+        {% if klasa %}
+            {% for nkl in klasa %}
+            <h5>{{nkl.nazwa_klasy}}</h5>
+            <p>wychowawca: {{nkl.wychowawca}}</p>
+            {% endfor %}
+        {% endif %}
+        
+        <p>Uczniowie:</p>
+        <ol>
+        {% for kl in uczniowie %}
+            <li><a href="/oceny/{{kl.id}}/">{{kl.nazwisko}} {{kl.imie}}</a></li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p>Brak uczniów w wybranej klasie w bazie danych</p>
+    {% endif %}
+
+
+{% endblock %}

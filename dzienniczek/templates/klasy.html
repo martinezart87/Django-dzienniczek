@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title%}Klasy{% endblock %}
+
+{%block content %}
+
+{% if klasy %}
+
+<h3>Klasy</h3>
+<p>nazwa klasy - wychowawca</p>
+<ul>
+    {% for kl in klasy %}
+    <li><a href="/uczniowie/{{kl.id}}/">{{kl.nazwa_klasy}} - {{kl.wychowawca}}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Brak klas w bazie danych</p>
+{% endif %}
+
+
+{% endblock %}
