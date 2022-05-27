@@ -8,12 +8,16 @@ Projekt zaliczeniowy na przedmiot Aplikacje internetowe w Django - WSB Chorzów.
 - HTML, CSS, Bootstrap.
 
 Aplikacja to dzienniczek ucznia. Użytkownik niezalogowany ma możliwość podglądu klas, uczniów oraz ocen poszczególnych ucznów.
+
 ![Dzienniczek ucznia](https://github.com/martinezart87/Django-dzienniczek/blob/master/images/Screenshot_2.jpg)
 
-Po zalogowaniu otrzymujemy dostęp do API i panelu administratora. 
-![Dzienniczek ucznia](https://github.com/martinezart87/Django-dzienniczek/blob/master/images/Screenshot_1.jpg)
+Dostęp do API i panelu administratora. Dostępne metody przedstawia poniższy obraz:
 
-![Dzienniczek ucznia](https://github.com/martinezart87/Django-dzienniczek/blob/master/images/Screenshot_3.jpg)
+![Django REST framework](https://github.com/martinezart87/Django-dzienniczek/blob/master/images/Screenshot_1.jpg)
+
+Panel administratora:
+
+![Panel administratora](https://github.com/martinezart87/Django-dzienniczek/blob/master/images/Screenshot_3.jpg)
 
 ## Uruchomienie
 
