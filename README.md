@@ -1,8 +1,6 @@
 # Django - dzienniczek
 
-### Wykonanie: Marcin Świerczek, nr albumu: 127166.
-
-Projekt zaliczeniowy na przedmiot Aplikacje internetowe w Django - WSB Chorzów. Technologie:
+Aplikacje internetowa w Django. Technologie:
 - Python,
 - Django,
 - Django REST framework,
